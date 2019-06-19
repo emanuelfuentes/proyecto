@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="welcome_message">Welcome</string>
+    <string name="login_message">Login</string>
+    <string name="advance_btn">advance</string>
+    <string name="accept_terms_and_conditions">accept terms and conditions</string>
+    <string name="enter_your_password_again">Enter your Password Again</string>
+    <string name="finish">Finish</string>
+    <string name="password">Password</string>
 </resources>
