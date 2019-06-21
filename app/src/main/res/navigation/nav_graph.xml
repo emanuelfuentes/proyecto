@@ -9,6 +9,22 @@
               android:label="activity_welcome" tools:layout="@layout/activity_welcome"/>
     <fragment
         android:id="@+id/passwordFragment"
+        tools:layout="@layout/fragment_register_pw"
         android:name="com.example.myapplication.Activities.Fragments.PasswordFragment"
         android:label="PasswordFragment" />
+    <fragment
+        android:id="@+id/nameFragment"
+        tools:layout="@layout/fragment_register_name"
+        android:name="com.example.myapplication.Activities.Fragments.NameFragment"
+        android:label="NameFragment" />
+    <fragment
+        android:id="@+id/emailFragment"
+        tools:layout="@layout/fragment_register_email"
+        android:name="com.example.myapplication.Activities.Fragments.EmailFragment"
+        android:label="EmailFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        tools:layout="@layout/fragment_login"
+        android:name="com.example.myapplication.Activities.Fragments.LoginFragment"
+        android:label="LoginFragment" />
 </navigation>
