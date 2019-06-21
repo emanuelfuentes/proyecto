@@ -3,17 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/destination_activity2">
+    app:startDestination="@id/destination_welcome">
     <activity
         android:id="@+id/destination_activity2"
         android:name="com.example.myapplication.Activities.HomeActivity"
         android:label="activity_home"
         tools:layout="@layout/activity_home" />
-    <activity
-        android:id="@+id/welcomeActivity"
-        android:name="com.example.myapplication.Activities.WelcomeActivity"
-        android:label="activity_welcome"
-        tools:layout="@layout/activity_welcome" />
     <fragment
         android:id="@+id/destination_password"
         android:name="com.example.myapplication.Activities.Fragments.PasswordFragment"
@@ -49,5 +44,17 @@
         <action
             android:id="@+id/next_action"
             app:destination="@id/destination_activity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_welcome"
+        android:name="com.example.myapplication.Activities.Fragments.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/destination_login" />
+        <action
+            android:id="@+id/next_action2"
+            app:destination="@id/destination_name" />
     </fragment>
 </navigation>

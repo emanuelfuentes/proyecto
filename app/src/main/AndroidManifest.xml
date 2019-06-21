@@ -11,7 +11,7 @@
             android:theme="@style/AppTheme">
         <activity android:name=".Activities.HomeActivity">
         </activity>
-        <activity android:name=".Activities.WelcomeActivity">
+        <activity android:name=".Activities.Fragments.WelcomeFragment">
         </activity>
         <activity android:name=".Activities.MainActivity">
             <intent-filter>
