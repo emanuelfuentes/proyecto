@@ -1,30 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
-            app:startDestination="@id/homeActivity2">
-    <activity android:id="@+id/homeActivity2" android:name="com.example.myapplication.Activities.HomeActivity"
-              android:label="activity_home" tools:layout="@layout/activity_home"/>
-    <activity android:id="@+id/welcomeActivity" android:name="com.example.myapplication.Activities.WelcomeActivity"
-              android:label="activity_welcome" tools:layout="@layout/activity_welcome"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/destination_activity2">
+    <activity
+        android:id="@+id/destination_activity2"
+        android:name="com.example.myapplication.Activities.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/welcomeActivity"
+        android:name="com.example.myapplication.Activities.WelcomeActivity"
+        android:label="activity_welcome"
+        tools:layout="@layout/activity_welcome" />
     <fragment
-        android:id="@+id/passwordFragment"
-        tools:layout="@layout/fragment_register_pw"
+        android:id="@+id/destination_password"
         android:name="com.example.myapplication.Activities.Fragments.PasswordFragment"
-        android:label="PasswordFragment" />
+        android:label="PasswordFragment"
+        tools:layout="@layout/fragment_register_pw">
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/destination_activity2" />
+    </fragment>
     <fragment
-        android:id="@+id/nameFragment"
-        tools:layout="@layout/fragment_register_name"
+        android:id="@+id/destination_name"
         android:name="com.example.myapplication.Activities.Fragments.NameFragment"
-        android:label="NameFragment" />
+        android:label="NameFragment"
+        tools:layout="@layout/fragment_register_name">
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/destination_email" />
+    </fragment>
     <fragment
-        android:id="@+id/emailFragment"
-        tools:layout="@layout/fragment_register_email"
+        android:id="@+id/destination_email"
         android:name="com.example.myapplication.Activities.Fragments.EmailFragment"
-        android:label="EmailFragment" />
+        android:label="EmailFragment"
+        tools:layout="@layout/fragment_register_email">
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/destination_password" />
+    </fragment>
     <fragment
-        android:id="@+id/loginFragment"
-        tools:layout="@layout/fragment_login"
+        android:id="@+id/destination_login"
         android:name="com.example.myapplication.Activities.Fragments.LoginFragment"
-        android:label="LoginFragment" />
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/destination_activity2" />
+    </fragment>
 </navigation>
